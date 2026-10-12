@@ -61,7 +61,6 @@ function About() {
 
       <section className="py-20">
         <div className="container-page grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
-          <img src={images.workspace} alt="Designer's desk with website wireframes and a laptop" loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover" />
           <div>
             <p className="eyebrow">Our values</p>
             <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">What guides our work</h2>
