@@ -68,12 +68,12 @@ function Contact() {
       <section className="py-16">
         <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.5fr]">
           <aside className="space-y-6">
-            <div className="rounded-2xl bg-navy p-8 text-navy-foreground">
+            <div className="rounded-2xl bg-primary p-8 text-primary-foreground">
               <p className="text-xl font-extrabold">Kwikdigi</p>
               <ul className="mt-6 space-y-5 text-sm">
-                <li className="flex gap-3"><MapPin className="h-5 w-5 shrink-0 text-primary" />{contact.location}</li>
-                <li className="flex gap-3"><Phone className="h-5 w-5 shrink-0 text-primary" /><span>Phone / WhatsApp: <a href={contact.tel} className="font-bold hover:text-primary">{contact.phone}</a></span></li>
-                <li className="flex gap-3"><Mail className="h-5 w-5 shrink-0 text-primary" /><a href={`mailto:${contact.email}`} className="break-all font-bold hover:text-primary">{contact.email}</a></li>
+                <li className="flex gap-3"><MapPin className="h-5 w-5 shrink-0 text-highlight" />{contact.location}</li>
+                <li className="flex gap-3"><Phone className="h-5 w-5 shrink-0 text-highlight" /><span>Phone / WhatsApp: <a href={contact.tel} className="font-bold hover:text-highlight">{contact.phone}</a></span></li>
+                <li className="flex gap-3"><Mail className="h-5 w-5 shrink-0 text-highlight" /><a href={`mailto:${contact.email}`} className="break-all font-bold hover:text-highlight">{contact.email}</a></li>
               </ul>
               <SocialLinks variant="dark" className="mt-8" />
             </div>

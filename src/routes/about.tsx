@@ -27,15 +27,15 @@ const values = [
 function About() {
   return (
     <>
-      <PageHero eyebrow="About us" title="Meet Kwikdigi — Your Partner in Digital Growth" />
+      <PageHero eyebrow="About us" title="A Hyderabad marketing studio that keeps things clear and practical" text="We plan, create and manage marketing for businesses that want to be easier to find and easier to choose." />
       <section className="py-20">
         <div className="container-page grid items-start gap-12 lg:grid-cols-2">
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
-              <strong className="text-navy">Kwikdigi is a digital marketing agency based in Hyderabad, India.</strong> We help businesses strengthen their digital presence through search engine optimization, paid advertising, social media marketing, and website design.
+              <strong className="text-navy">Kwikdigi is a digital marketing agency in Ameerpet, Hyderabad.</strong> We work with small businesses, startups, training institutes, clinics and service brands on SEO, Google and Meta ads, social media and websites.
             </p>
             <p>
-              Our approach combines creative thinking, practical execution, and a focus on business objectives. We believe good digital marketing should be clear, relevant, measurable, and aligned with the needs of each business.
+              We start by listening — who your customers are, what they ask before buying, and what a good result looks like for you. Then we pick the few channels that fit, do the work well, and explain what we see in plain language.
             </p>
           </div>
           <img src={images.meeting} alt="Professionals discussing a marketing plan around a meeting table" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
@@ -50,9 +50,9 @@ function About() {
               To help businesses build a meaningful and effective digital presence through creative and practical marketing solutions.
             </p>
           </div>
-          <div className="rounded-2xl bg-navy p-9">
-            <p className="eyebrow text-primary">Our approach</p>
-            <p className="mt-4 text-2xl font-bold leading-snug text-navy-foreground">
+          <div className="rounded-2xl bg-primary p-9">
+            <p className="eyebrow text-highlight">Our approach</p>
+            <p className="mt-4 text-2xl font-bold leading-snug text-primary-foreground">
               Understand the audience, plan the strategy, create the experience, and improve based on performance.
             </p>
           </div>
@@ -60,12 +60,11 @@ function About() {
       </section>
 
       <section className="py-20">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
-          <img src={images.workspace} alt="Designer's desk with website wireframes and a laptop" loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover" />
-          <div>
+        <div className="container-page ">
+          <div className="max-w-4xl">
             <p className="eyebrow">Our values</p>
             <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">What guides our work</h2>
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {values.map(({ Icon, t }) => (
                 <li key={t} className="flex items-center gap-3 rounded-xl border border-border p-4 font-semibold text-navy">
                   <Icon className="h-5 w-5 shrink-0 text-primary" /> {t}

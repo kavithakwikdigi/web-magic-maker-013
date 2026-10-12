@@ -1,3 +1,4 @@
+import { BlogCover } from "@/components/site/ui";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { articles, getArticle } from "@/lib/blog";
 import { getService } from "@/lib/site";
@@ -51,7 +52,7 @@ function ArticlePage() {
           </div>
         </header>
         <div className="container-page max-w-3xl">
-          <img src={a.image} alt="" width={1280} height={960} className="-mt-2 aspect-[16/9] w-full rounded-2xl object-cover shadow-soft md:mt-10" />
+          <BlogCover category={a.category} className="-mt-2 aspect-[16/7] md:mt-10" />
           <div className="prose-article mt-10">
             <p className="text-lg text-muted-foreground">{a.excerpt}</p>
             {a.sections.map((s) => (

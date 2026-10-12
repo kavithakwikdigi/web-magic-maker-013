@@ -10,6 +10,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Kwikdigi helps businesses build a stronger online presence through SEO, performance advertising, social media and beautiful websites." },
       { property: "og:title", content: "Kwikdigi — Digital Marketing Agency in Hyderabad" },
       { property: "og:description", content: "SEO, Google Ads, Meta Ads, social media marketing and websites for businesses in India and beyond." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -62,15 +64,15 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-cream">
-        <div className="container-page grid items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_1fr]">
+      <section className="relative overflow-hidden bg-background">
+        <div className="container-page grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr]">
           <div className="fade-up">
             <p className="eyebrow">Digital Marketing Agency | Hyderabad, India</p>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.08] md:text-6xl">
-              Your Brand Deserves to Be <span className="text-brand">Seen</span>, Remembered &amp; <span className="relative whitespace-nowrap">Chosen.<span className="absolute -bottom-1 left-0 h-1.5 w-full rounded-full bg-primary/80" aria-hidden="true" /></span>
+            <h1 className="mt-5 text-4xl font-bold leading-[1.1] md:text-6xl">
+              Make Your Brand <span className="relative whitespace-nowrap text-brand">Stand Out<span className="absolute -bottom-1 left-0 h-1.5 w-full rounded-full bg-highlight" aria-hidden="true" /></span> Online.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Kwikdigi helps businesses build a stronger online presence through smart digital marketing, creative content, performance advertising, and beautiful websites.
+              Smart digital marketing, meaningful content, and high-performing websites to help your business reach the right audience.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <PrimaryLink to="/contact">Let's Discuss Your Project</PrimaryLink>
@@ -78,15 +80,15 @@ function Home() {
                 Explore Our Services
               </Link>
             </div>
-            <p className="mt-8 border-l-2 border-primary pl-4 text-sm font-medium text-navy/80">
+            <p className="mt-8 border-l-2 border-highlight pl-4 text-sm font-medium text-navy/80">
               Creative thinking. Practical strategy. Meaningful digital experiences.
             </p>
           </div>
           <div className="relative fade-up">
-            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-brand/15" aria-hidden="true" />
+            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-highlight/15" aria-hidden="true" />
             <img
               src={images.heroTeam}
-              alt="Kwikdigi-style marketing team collaborating around a laptop in a bright Hyderabad office"
+              alt="Marketing team planning a campaign together in a bright office"
               width={1280}
               height={1440}
               className="relative aspect-[4/4.2] w-full rounded-2xl object-cover shadow-soft"
@@ -124,9 +126,9 @@ function Home() {
           <img src={images.planning} alt="Marketing strategist planning a campaign on a glass wall with a colleague" loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
           <div>
             <p className="eyebrow">Our approach</p>
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-4xl">Digital Marketing That Starts With Your Business Goals</h2>
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-4xl">Marketing That Starts With Your Customers</h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Every business has a different audience, challenge, and ambition. At Kwikdigi, we focus on understanding your goals before planning your digital presence. From search visibility to creative campaigns and responsive websites, we help businesses communicate clearly and connect with the right people.
+              Before we touch a keyword or an ad, we learn who you serve and what makes people pick you. That shapes everything else — the search terms we target, the posts we write and the pages we build — so your message feels clear and consistent wherever people meet you.
             </p>
             <div className="mt-8"><PrimaryLink to="/about">More About Kwikdigi</PrimaryLink></div>
           </div>
@@ -147,16 +149,16 @@ function Home() {
       </section>
 
       {/* Why */}
-      <section className="bg-cream py-20">
-        <div className="container-page grid gap-12 lg:grid-cols-[1fr_1.3fr]">
+      <section className="bg-sky py-20">
+        <div className="container-page grid items-center gap-12 lg:grid-cols-[1fr_1.3fr]">
           <div>
             <SectionHead eyebrow="Why Kwikdigi" title="Thoughtful Strategy. Creative Execution." />
-            <img src={images.meeting} alt="Team reviewing campaign analytics together in a meeting room" loading="lazy" width={1280} height={960} className="mt-8 aspect-[4/3] w-full rounded-2xl object-cover" />
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">A small, focused team means you talk to the people doing the work — and every decision has a reason behind it.</p>
           </div>
           <div className="grid content-center gap-4 sm:grid-cols-2">
             {why.map(({ Icon, title, text }) => (
               <div key={title} className="rounded-xl border border-border bg-card p-7">
-                <Icon className="h-6 w-6 text-primary" />
+                <Icon className="h-6 w-6 text-highlight" />
                 <h3 className="mt-4 text-lg font-bold">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
               </div>
@@ -173,7 +175,7 @@ function Home() {
             <div className="absolute left-6 top-0 h-full w-px bg-border lg:left-0 lg:top-6 lg:h-px lg:w-full" aria-hidden="true" />
             {steps.map((s) => (
               <li key={s.n} className="relative flex gap-5 lg:block">
-                <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full bg-navy text-sm font-extrabold text-navy-foreground ring-8 ring-background">{s.n}</span>
+                <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground ring-8 ring-background">{s.n}</span>
                 <div className="lg:mt-6">
                   <h3 className="text-xl font-bold">{s.t}</h3>
                   <p className="mt-2 text-muted-foreground">{s.d}</p>
@@ -185,14 +187,14 @@ function Home() {
       </section>
 
       {/* Markets */}
-      <section className="bg-sky py-20">
+      <section className="py-20">
         <div className="container-page">
-          <SectionHead eyebrow="Industries & markets" title="Digital Solutions for Businesses Across Markets" text="Based in Hyderabad, we're happy to discuss projects and availability with businesses across these industries and markets." />
+          <SectionHead eyebrow="Industries & markets" title="Digital Solutions for Businesses Across Markets" text="We work from Hyderabad and take on projects remotely for businesses in these markets." />
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <div className="rounded-xl bg-card p-7 shadow-soft">
               <h3 className="flex items-center gap-2 font-bold"><BarChart3 className="h-5 w-5 text-brand" /> Industries we can support</h3>
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-                {industries.map((i) => <li key={i} className="flex gap-2 text-sm"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />{i}</li>)}
+                {industries.map((i) => <li key={i} className="flex gap-2 text-sm"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-success" />{i}</li>)}
               </ul>
             </div>
             <div className="rounded-xl bg-card p-7 shadow-soft">

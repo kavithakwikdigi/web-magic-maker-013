@@ -1,3 +1,4 @@
+import { ServiceVisual } from "@/components/site/ui";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { getService } from "@/lib/site";
@@ -53,7 +54,7 @@ function ServiceDetail() {
               <WhatsAppButton />
             </div>
           </div>
-          <img src={s.image} alt={`${s.name} work at Kwikdigi`} width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft fade-up" />
+          <ServiceVisual slug={s.slug} name={s.name} />
         </div>
       </section>
 
