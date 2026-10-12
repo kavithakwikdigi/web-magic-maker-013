@@ -36,7 +36,7 @@ export function ServiceVisual({ slug, name }: { slug: string; name: string }) {
 export function BlogCover({ category, className = "" }: { category: string; className?: string }) {
   const map: Record<string, [LucideIcon, number]> = {
     SEO: [Search, 0], "Local SEO": [MapPin, 2], "Google Ads": [MousePointerClick, 1], "Meta Ads": [Target, 1],
-    "Social Media": [Share2, 2], "Content Marketing": [PenLine, 1], "Website Design": [Palette, 0], Strategy: [Compass, 0],
+    "Social Media": [Share2, 2], "Content Marketing": [PenLine, 1], "Website Design": [Palette, 0], "Digital Strategy": [Compass, 0],
   };
   const [Icon, t] = map[category] ?? [BookOpen, 0];
   return (
