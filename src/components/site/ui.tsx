@@ -18,7 +18,7 @@ export const serviceIcons: Record<string, LucideIcon> = {
   "digital-marketing-strategy": Compass,
 };
 
-const tones = ["bg-sky text-brand", "bg-highlight/10 text-highlight", "bg-success/10 text-success"];
+const tones: [string, string, string] = ["bg-sky text-brand", "bg-highlight/10 text-highlight", "bg-success/10 text-success"];
 
 export function ServiceVisual({ slug, name }: { slug: string; name: string }) {
   const Icon = serviceIcons[slug] ?? Compass;
@@ -40,9 +40,9 @@ export function BlogCover({ category, className = "" }: { category: string; clas
   };
   const [Icon, t] = map[category] ?? [BookOpen, 0];
   return (
-    <div className={`relative grid w-full place-items-center overflow-hidden rounded-2xl ${tones[t].split(" ")[0]} ${className}`} aria-hidden="true">
+    <div className={`relative grid w-full place-items-center overflow-hidden rounded-2xl ${(tones[t] ?? tones[0]).split(" ")[0]} ${className}`} aria-hidden="true">
       <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-background/60" />
-      <Icon className={`relative h-12 w-12 ${tones[t].split(" ")[1]}`} strokeWidth={1.6} />
+      <Icon className={`relative h-12 w-12 ${(tones[t] ?? tones[0]).split(" ")[1]}`} strokeWidth={1.6} />
     </div>
   );
 }
