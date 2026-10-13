@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.kwikdigi.com/sitemap.xml
+Sitemap: https://web-magic-maker-013.lovable.app/sitemap.xml
