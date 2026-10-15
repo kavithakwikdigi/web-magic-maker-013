@@ -23,6 +23,31 @@ export const Route = createFileRoute("/services/$slug")({
         { property: "og:description", content: s.description },
       ],
       links: [{ rel: "canonical", href: `/services/${params.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: s.name,
+            description: s.description,
+            areaServed: "Hyderabad, India",
+            provider: { "@type": "ProfessionalService", name: "Kwikdigi", telephone: "+91-9849446927" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "/services" },
+              { "@type": "ListItem", position: 3, name: s.name, item: `/services/${params.slug}` },
+            ],
+          }),
+        },
+      ],
     };
   },
   component: ServiceDetail,
@@ -77,7 +102,11 @@ function ServiceDetail() {
                 <li key={b} className="flex gap-3"><span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" /><span>{b}</span></li>
               ))}
             </ul>
-            <p className="mt-6 text-sm text-muted-foreground">We don't promise guaranteed rankings, leads, or sales — we promise careful work and honest reporting.</p>
+            <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+              We work from Ameerpet, Hyderabad, with businesses across the city and beyond — meetings can happen in person nearby, by phone, or online.
+              Questions? Call or WhatsApp <a href="tel:+919849446927" className="font-bold text-brand hover:underline">+91 9849446927</a> or <Link to="/contact" className="font-bold text-brand hover:underline">send an enquiry</Link>.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">We don't promise guaranteed rankings, leads, or sales — we promise careful work and honest reporting.</p>
           </div>
         </div>
       </section>

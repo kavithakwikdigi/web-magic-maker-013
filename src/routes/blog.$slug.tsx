@@ -23,7 +23,12 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:type", content: "article" },
       ],
       links: [{ rel: "canonical", href: `/blog/${params.slug}` }],
-      scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: a.title, author: { "@type": "Organization", name: "Kwikdigi" } }) }],
+      scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.excerpt, author: { "@type": "Organization", name: "Kwikdigi" }, publisher: { "@type": "Organization", name: "Kwikdigi" } }) },
+        { type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "/blog" },
+          { "@type": "ListItem", position: 3, name: a.title, item: `/blog/${params.slug}` },
+        ] }) }],
     };
   },
   component: ArticlePage,
@@ -33,7 +38,7 @@ function ArticlePage() {
   const { article: a } = Route.useLoaderData();
   const svc = getService(a.service);
   const related = articles.filter((x) => x.slug !== a.slug && x.category === a.category).concat(articles.filter((x) => x.slug !== a.slug && x.category !== a.category)).slice(0, 3);
-  const url = typeof window !== "undefined" ? window.location.href : `https://www.kwikdigi.com/blog/${a.slug}`;
+  const url = typeof window !== "undefined" ? window.location.href : `https://web-magic-maker-013.lovable.app/blog/${a.slug}`;
   const share = [
     { label: "Share on WhatsApp", href: `https://wa.me/?text=${encodeURIComponent(`${a.title} ${url}`)}`, Icon: WhatsAppIcon },
     { label: "Share on LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, Icon: LinkedInIcon },
