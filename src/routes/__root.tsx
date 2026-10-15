@@ -98,6 +98,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Kwikdigi",
+          description: "Digital marketing agency in Ameerpet, Hyderabad offering SEO, Google Ads, Meta Ads, social media marketing and website design.",
+          telephone: "+91-9849446927",
+          email: "kavitham6574@gmail.com",
+          address: { "@type": "PostalAddress", addressLocality: "Ameerpet, Hyderabad", addressRegion: "Telangana", addressCountry: "IN" },
+          areaServed: "Hyderabad",
+          sameAs: [
+            "https://www.instagram.com/kwikdigiofficial/",
+            "https://www.facebook.com/profile.php?id=61593538270069",
+            "https://www.linkedin.com/in/kavitha-m-33a181430/",
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
