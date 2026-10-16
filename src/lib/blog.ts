@@ -21,7 +21,7 @@ export const articles: Article[] = [
     category: "Digital Strategy",
     excerpt: "A simple overview of the main digital marketing channels and how they fit together for a growing business.",
     minutes: 6,
-    image: images.planning,
+    image: images.workspace,
     service: "digital-marketing-strategy",
     sections: [
       { h: "What is digital marketing?", p: ["Digital marketing is any effort to reach and persuade customers using online channels — search engines, social media, email, websites, and online ads. For most businesses, it is now the first place customers look before making a decision."] },
@@ -81,7 +81,7 @@ export const articles: Article[] = [
     category: "Social Media",
     excerpt: "Practical, low-effort content ideas to keep your social media consistent and genuinely interesting.",
     minutes: 4,
-    image: images.planning,
+    image: images.workspace,
     service: "social-media-marketing",
     sections: [
       { h: "Consistency beats perfection", p: ["You don't need viral posts. A steady rhythm of useful, recognisable content builds familiarity and trust over time."] },
@@ -123,7 +123,7 @@ export const articles: Article[] = [
     category: "Digital Strategy",
     excerpt: "A step-by-step approach to building a marketing plan you can actually follow.",
     minutes: 7,
-    image: images.planning,
+    image: images.workspace,
     service: "digital-marketing-strategy",
     sections: [
       { h: "Start with a goal", p: ["A useful plan begins with one clear objective — more enquiries, more store visits, more course registrations. Make it specific enough to measure."] },
