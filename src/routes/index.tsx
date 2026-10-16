@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BarChart3, Compass, Globe2, MessageSquare, Palette, Search, Megaphone, Share2, Monitor } from "lucide-react";
+import { BarChart3, CheckCircle2, Compass, Globe2, MessageSquare, Palette, Search, Megaphone, Share2, Monitor } from "lucide-react";
 import { images, services } from "@/lib/site";
 import { CtaBand, PrimaryLink, SectionHead, ServiceCard, WhatsAppButton } from "@/components/site/ui";
 
@@ -37,17 +37,17 @@ export const Route = createFileRoute("/")({
 });
 
 const pillars = [
-  { Icon: Search, title: "SEO", text: "Be found when people search." },
-  { Icon: Megaphone, title: "Paid Ads", text: "Reach chosen audiences quickly." },
-  { Icon: Share2, title: "Social Media", text: "Stay visible and familiar." },
-  { Icon: Monitor, title: "Websites", text: "Turn visits into enquiries." },
+  { Icon: Search, title: "SEO", text: "Help people find you when they search." },
+  { Icon: Megaphone, title: "Paid Ads", text: "Reach the right audience with a clear offer." },
+  { Icon: Share2, title: "Social Media", text: "Keep your brand visible and familiar." },
+  { Icon: Monitor, title: "Websites", text: "Make it easy for visitors to enquire." },
 ];
 
 const why = [
-  { Icon: Compass, title: "Strategic Thinking", text: "Start with business goals and audience needs." },
-  { Icon: Palette, title: "Creative Communication", text: "Present your brand with consistent, professional content." },
-  { Icon: BarChart3, title: "Data-Informed Improvements", text: "Use available performance data to identify opportunities." },
-  { Icon: MessageSquare, title: "Clear Communication", text: "Keep deliverables, timelines, and expectations transparent." },
+  { Icon: Compass, title: "Clear priorities", text: "We focus on the work most likely to matter for your goals." },
+  { Icon: Palette, title: "Polished creative", text: "Your website, ads and posts look and sound consistent." },
+  { Icon: BarChart3, title: "Practical reporting", text: "We explain what changed, what we learned and what comes next." },
+  { Icon: MessageSquare, title: "Direct contact", text: "You can speak with the people planning and doing the work." },
 ];
 
 const steps = [
@@ -64,34 +64,35 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-background">
-        <div className="container-page grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr]">
+      <section className="relative overflow-hidden bg-cream">
+        <div className="container-page grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1fr_1.05fr]">
           <div className="fade-up">
-            <p className="eyebrow">Digital Marketing Agency | Hyderabad, India</p>
+            <p className="eyebrow">Hyderabad-based · Serving India and international clients</p>
             <h1 className="mt-5 text-4xl font-bold leading-[1.1] md:text-6xl">
-              Make Your Brand <span className="relative whitespace-nowrap text-brand">Stand Out<span className="absolute -bottom-1 left-0 h-1.5 w-full rounded-full bg-highlight" aria-hidden="true" /></span> Online.
+              Digital marketing that helps your business <span className="relative whitespace-nowrap text-brand">get noticed<span className="absolute -bottom-1 left-0 h-1.5 w-full rounded-full bg-highlight" aria-hidden="true" /></span>.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Smart digital marketing, meaningful content, and high-performing websites to help your business reach the right audience.
+              SEO, ads, social media and websites planned around your customers, your budget and the enquiries you want to receive.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <PrimaryLink to="/contact">Let's Discuss Your Project</PrimaryLink>
-              <Link to="/services" className="inline-flex items-center rounded-full border border-navy/20 px-6 py-3.5 text-sm font-bold text-navy transition hover:border-brand hover:text-brand">
+              <PrimaryLink to="/contact">Discuss Your Project</PrimaryLink>
+              <Link to="/services" className="inline-flex items-center rounded-full border border-navy/20 bg-background px-6 py-3.5 text-sm font-bold text-navy transition hover:-translate-y-0.5 hover:border-brand hover:text-brand">
                 Explore Our Services
               </Link>
             </div>
-            <p className="mt-8 border-l-2 border-highlight pl-4 text-sm font-medium text-navy/80">
-              Creative thinking. Practical strategy. Meaningful digital experiences.
-            </p>
+            <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-navy/80">
+              {["No inflated promises", "Clear reporting", "Remote-friendly"].map((x) => <li key={x} className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-success" />{x}</li>)}
+            </ul>
           </div>
           <div className="relative fade-up">
-            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-highlight/15" aria-hidden="true" />
+            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-success/15" aria-hidden="true" />
             <img
-              src={images.heroTeam}
-              alt="Marketing team planning a campaign together in a bright office"
-              width={1280}
-              height={1440}
-              className="relative aspect-[4/4.2] w-full rounded-2xl object-cover shadow-soft"
+              src={images.heroWorkspace}
+              alt="Bright workspace with a laptop showing a website layout, brand colour swatches and a notebook"
+              width={1536}
+              height={1024}
+              fetchPriority="high"
+              className="relative aspect-[4/3] w-full rounded-2xl object-cover object-right shadow-soft"
             />
             <div className="absolute -left-4 bottom-8 hidden rounded-xl bg-background p-4 shadow-soft sm:block">
               <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Serving</p>
@@ -122,13 +123,14 @@ function Home() {
 
       {/* Intro */}
       <section className="bg-sky py-20">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-2">
-          <img src={images.planning} alt="Marketing strategist planning a campaign on a glass wall with a colleague" loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
+        <div className="container-page grid items-center gap-10 lg:grid-cols-[1fr_1fr]">
           <div>
             <p className="eyebrow">Our approach</p>
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-4xl">Marketing That Starts With Your Customers</h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Before we touch a keyword or an ad, we learn who you serve and what makes people pick you. That shapes everything else — the search terms we target, the posts we write and the pages we build — so your message feels clear and consistent wherever people meet you.
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-4xl">We start with your customers, not a channel.</h2>
+          </div>
+          <div>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              First, we learn who you serve, what they need to know and why they choose you. Then we choose the right mix of search, ads, content and website improvements.
             </p>
             <div className="mt-8"><PrimaryLink to="/about">More About Kwikdigi</PrimaryLink></div>
           </div>
