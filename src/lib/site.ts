@@ -1,8 +1,9 @@
-import heroWorkspace from "@/assets/marketing-workspace.jpg";
+import heroTeam from "@/assets/hero-team.jpg";
+import planning from "@/assets/planning.jpg";
 import workspace from "@/assets/workspace.jpg";
 import meeting from "@/assets/meeting.jpg";
 
-export const images = { heroWorkspace, workspace, meeting };
+export const images = { heroTeam, planning, workspace, meeting };
 
 export const contact = {
   phone: "+91 9849446927",
@@ -36,7 +37,7 @@ export const services: Service[] = [
   {
     slug: "seo",
     name: "Search Engine Optimization (SEO)",
-    short: "Show up when customers search for what you offer.",
+    short: "Get found by people searching for what you offer.",
     heading: "Help Your Business Get Found on Google",
     description:
       "Improve your website's search visibility with a structured SEO strategy that focuses on relevant keywords, useful content, technical improvements, and quality backlinks.",
@@ -53,8 +54,8 @@ export const services: Service[] = [
   },
   {
     slug: "google-ads",
-    name: "Google Ads & PPC Management",
-    short: "Search and PPC campaigns built around a clear goal.",
+    name: "Google Ads Management",
+    short: "Appear when customers are actively searching.",
     heading: "Reach the Right Audience at the Right Time",
     description:
       "Plan and manage Google Ads campaigns designed around your audience, business objectives, budget, and measurable campaign performance.",
@@ -72,14 +73,14 @@ export const services: Service[] = [
   {
     slug: "meta-ads",
     name: "Meta Ads Management",
-    short: "Facebook and Instagram ads with clear creative and careful targeting.",
+    short: "Facebook and Instagram campaigns with thoughtful creative.",
     heading: "Turn Attention into Meaningful Action",
     description:
       "Reach relevant audiences through Facebook and Instagram advertising with thoughtful creative, audience targeting, and campaign optimization.",
     includes: ["Audience Research", "Campaign Setup", "Creative Testing", "Retargeting (where appropriate)", "Performance Analysis"],
     benefits: ["Ads designed to stop the scroll", "Audiences matched to your ideal customer", "Testing that informs future creative"],
     cta: "Explore Meta Ads",
-    image: workspace,
+    image: planning,
     faqs: [
       { q: "Do you create the ad designs?", a: "Yes, we can plan and design static and simple video creatives for your campaigns, or work with assets you already have." },
       { q: "Which is better: Meta Ads or Google Ads?", a: "They serve different purposes. Google Ads reaches people searching; Meta Ads reaches people based on interests and behaviour. Many businesses benefit from both." },
@@ -90,14 +91,14 @@ export const services: Service[] = [
   {
     slug: "social-media-marketing",
     name: "Social Media Marketing",
-    short: "Planned content that keeps your brand familiar.",
+    short: "A consistent, recognizable brand on social platforms.",
     heading: "Build a Consistent and Recognizable Brand",
     description:
       "Create a stronger social media presence through strategic content planning, professional static posts, reels, captions, and audience engagement.",
     includes: ["Content Calendars", "Instagram Marketing", "Facebook Marketing", "Static Post Design", "Reels Planning", "Content Strategy"],
     benefits: ["A planned, consistent posting rhythm", "Visuals that match your brand", "Content ideas grounded in your audience"],
     cta: "Build Your Social Presence",
-    image: workspace,
+    image: planning,
     faqs: [
       { q: "Which platforms do you manage?", a: "We primarily work with Instagram and Facebook, and can discuss other platforms based on your audience." },
       { q: "How many posts will I get each month?", a: "Posting frequency is agreed based on your goals and budget. We share a content calendar for approval before publishing." },
@@ -108,7 +109,7 @@ export const services: Service[] = [
   {
     slug: "website-designing",
     name: "Website Designing",
-    short: "Clear, mobile-friendly websites that help visitors take action.",
+    short: "Clean, modern, mobile-friendly websites.",
     heading: "Beautiful Websites Built Around Your Business",
     description:
       "Create clean, modern, mobile-friendly websites that communicate your value, build trust, and help visitors take the next step.",
@@ -126,7 +127,7 @@ export const services: Service[] = [
   {
     slug: "website-development",
     name: "Website Development",
-    short: "Fast, reliable websites with working forms and simple updates.",
+    short: "Responsive, maintainable, functional web experiences.",
     heading: "Bring Your Digital Experience to Life",
     description:
       "Develop responsive and maintainable web experiences with clear navigation, functional interactions, and a focus on usability.",
@@ -144,14 +145,14 @@ export const services: Service[] = [
   {
     slug: "content-marketing",
     name: "Content Marketing",
-    short: "Useful website copy, blogs and captions in your brand voice.",
+    short: "Content that explains, educates, and connects.",
     heading: "Content That Connects With Your Audience",
     description:
       "Plan relevant website content, blog articles, social captions, and educational resources that communicate your brand's value.",
     includes: ["Content Strategy", "Website Copy", "Blog Articles", "Social Captions", "Educational Resources"],
     benefits: ["A clear, consistent brand voice", "Content that answers real customer questions", "Support for SEO and social channels"],
     cta: "Plan Your Content",
-    image: workspace,
+    image: planning,
     faqs: [
       { q: "Do you write in a specific tone?", a: "We adapt to your brand and audience, and agree on a tone of voice before writing." },
       { q: "Is the content original?", a: "Yes. All content is written for your business. We do not copy material from other sites." },
@@ -161,8 +162,8 @@ export const services: Service[] = [
   },
   {
     slug: "local-seo",
-    name: "Local SEO & Google Business Profile",
-    short: "Improve your profile and visibility in nearby searches.",
+    name: "Local SEO",
+    short: "Be visible to customers searching nearby.",
     heading: "Connect With Customers Searching Locally",
     description:
       "Improve local search visibility through relevant location-based content, business profile optimization, and local SEO fundamentals.",
@@ -180,7 +181,7 @@ export const services: Service[] = [
   {
     slug: "landing-page-design",
     name: "Landing Page Design",
-    short: "Focused pages that turn campaign visits into enquiries.",
+    short: "Focused pages built around one campaign goal.",
     heading: "Turn More Visits into Valuable Enquiries",
     description:
       "Create focused landing pages with clear messaging, strong calls to action, and a user experience built around a specific campaign goal.",
@@ -198,7 +199,7 @@ export const services: Service[] = [
   {
     slug: "digital-marketing-strategy",
     name: "Digital Marketing Strategy",
-    short: "A practical plan for where to focus first.",
+    short: "A practical roadmap for your digital growth.",
     heading: "A Clear Plan for Your Digital Growth",
     description:
       "Build a practical marketing roadmap based on your business goals, target audience, channels, budget, and available performance data.",
