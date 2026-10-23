@@ -8,7 +8,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-navy text-navy-foreground">
-      <div className="container-page grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1.2fr_1fr]">
+      <div className="container-page grid gap-x-10 gap-y-8 py-12 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1.2fr_1fr]">
         <div>
           <Link to="/" aria-label="Kwikdigi home" className="inline-flex rounded-lg bg-background px-3 py-2">
             <Logo />

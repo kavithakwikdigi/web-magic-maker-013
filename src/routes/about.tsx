@@ -10,6 +10,8 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Meet Kwikdigi, a Hyderabad digital marketing agency combining creative thinking and practical execution to help businesses grow online." },
       { property: "og:title", content: "About Kwikdigi — Your Partner in Digital Growth" },
       { property: "og:description", content: "Our mission, approach and values as a digital marketing agency in Hyderabad, India." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -28,8 +30,8 @@ function About() {
   return (
     <>
       <PageHero eyebrow="About us" title="A Hyderabad marketing studio that keeps things clear and practical" text="We plan, create and manage marketing for businesses that want to be easier to find and easier to choose." />
-      <section className="py-20">
-        <div className="container-page grid items-start gap-12 lg:grid-cols-2">
+      <section className="py-12 md:py-16">
+        <div className="container-page grid items-start gap-x-12 gap-y-8 lg:grid-cols-2">
           <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
               <strong className="text-navy">Kwikdigi is a digital marketing agency in Ameerpet, Hyderabad.</strong> We work with small businesses, startups, training institutes, clinics and service brands on SEO, Google and Meta ads, social media and websites.
@@ -42,7 +44,7 @@ function About() {
         </div>
       </section>
 
-      <section className="bg-sky py-20">
+      <section className="bg-sky py-12 md:py-16">
         <div className="container-page grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl bg-card p-9 shadow-soft">
             <p className="eyebrow">Our mission</p>
@@ -59,7 +61,7 @@ function About() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-16">
         <div className="container-page ">
           <div className="max-w-4xl">
             <p className="eyebrow">Our values</p>

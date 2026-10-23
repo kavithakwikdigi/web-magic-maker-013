@@ -21,6 +21,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: a.title },
         { property: "og:description", content: a.excerpt },
         { property: "og:type", content: "article" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: `/blog/${params.slug}` }],
       scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.excerpt, author: { "@type": "Organization", name: "Kwikdigi" }, publisher: { "@type": "Organization", name: "Kwikdigi" } }) },
@@ -48,7 +49,7 @@ function ArticlePage() {
     <>
       <article>
         <header className="bg-sky">
-          <div className="container-page max-w-3xl py-14 md:py-20">
+          <div className="container-page max-w-3xl py-12 md:py-16">
             <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground">
               <Link to="/blog" className="hover:text-brand">Blog</Link> <span aria-hidden="true">/</span> {a.category}
             </nav>
@@ -58,7 +59,7 @@ function ArticlePage() {
         </header>
         <div className="container-page max-w-3xl">
           <BlogCover category={a.category} className="-mt-2 aspect-[16/7] md:mt-10" />
-          <div className="prose-article mt-10">
+          <div className="prose-article mt-8">
             <p className="text-lg text-muted-foreground">{a.excerpt}</p>
             {a.sections.map((s) => (
               <section key={s.h}>
@@ -86,7 +87,7 @@ function ArticlePage() {
           </div>
         </div>
       </article>
-      <section className="pt-16">
+      <section className="pt-12 md:pt-16">
         <div className="container-page">
           <h2 className="text-2xl font-extrabold">Related articles</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-3">{related.map((r) => <BlogCard key={r.slug} a={r} />)}</div>

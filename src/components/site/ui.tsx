@@ -88,7 +88,7 @@ export function PrimaryLink({ to, children }: { to: "/contact" | "/services" | "
 export function PageHero({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) {
   return (
     <section className="border-b border-border bg-sky">
-      <div className="container-page py-16 md:py-20">
+      <div className="container-page py-12 md:py-16">
         <p className="eyebrow fade-up">{eyebrow}</p>
         <h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-tight md:text-5xl fade-up">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground fade-up">{text}</p>}
@@ -151,9 +151,9 @@ export function BlogCard({ a }: { a: Article }) {
 
 export function CtaBand({ title = "Have a project in mind?", text = "Tell us what you sell and who you want to reach. We'll suggest a sensible next step — no pressure, no jargon." }: { title?: string; text?: string }) {
   return (
-    <section className="py-20">
+    <section className="py-12 md:py-16">
       <div className="container-page">
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-sky px-8 py-14 md:px-14">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-sky px-8 py-10 md:px-14 md:py-12">
           <div className="absolute right-0 top-0 h-full w-1.5 bg-highlight" aria-hidden="true" />
           <div className="grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
             <div>

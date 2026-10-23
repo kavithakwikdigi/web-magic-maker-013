@@ -10,6 +10,8 @@ export const Route = createFileRoute("/blog/")({
       { name: "description", content: "Practical ideas and beginner-friendly guides on SEO, Google Ads, Meta Ads, social media, website design and digital strategy." },
       { property: "og:title", content: "Digital Insights for Smarter Growth — Kwikdigi Blog" },
       { property: "og:description", content: "Beginner-friendly digital marketing guides from Kwikdigi." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/blog" }],
   }),
@@ -26,7 +28,7 @@ function Blog() {
         title="Digital Insights for Smarter Growth"
         text="Explore practical ideas, beginner-friendly guides, and useful digital marketing insights to help your business make better online decisions."
       />
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container-page">
           <div role="group" aria-label="Filter by category" className="flex flex-wrap gap-2">
             {["All", ...categories].map((c) => (
@@ -44,11 +46,11 @@ function Blog() {
             ))}
           </div>
           {list.length ? (
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {list.map((a) => <BlogCard key={a.slug} a={a} />)}
             </div>
           ) : (
-            <p className="mt-10 rounded-xl bg-sky p-8 text-center text-muted-foreground">New articles in this category are coming soon.</p>
+            <p className="mt-8 rounded-xl bg-sky p-8 text-center text-muted-foreground">New articles in this category are coming soon.</p>
           )}
         </div>
       </section>

@@ -21,6 +21,8 @@ export const Route = createFileRoute("/services/$slug")({
         { name: "description", content: s.description },
         { property: "og:title", content: `${s.name} — Kwikdigi` },
         { property: "og:description", content: s.description },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: `/services/${params.slug}` }],
       scripts: [
@@ -66,7 +68,7 @@ function ServiceDetail() {
   return (
     <>
       <section className="border-b border-border bg-sky">
-        <div className="container-page grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2">
+        <div className="container-page grid items-center gap-x-10 gap-y-8 py-12 md:py-16 lg:grid-cols-2">
           <div className="fade-up">
             <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground">
               <Link to="/services" className="hover:text-brand">Services</Link> <span aria-hidden="true">/</span> {s.name}
@@ -83,8 +85,8 @@ function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container-page grid gap-10 lg:grid-cols-2">
+      <section className="py-12 md:py-16">
+        <div className="container-page grid gap-x-10 gap-y-8 lg:grid-cols-2">
           <div>
             <h2 className="text-2xl font-extrabold md:text-3xl">What's included</h2>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -111,7 +113,7 @@ function ServiceDetail() {
         </div>
       </section>
 
-      <section className="bg-sky py-20">
+      <section className="bg-sky py-12 md:py-16">
         <div className="container-page">
           <h2 className="text-2xl font-extrabold md:text-3xl">Our approach</h2>
           <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -126,8 +128,8 @@ function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.5fr]">
+      <section className="py-12 md:py-16">
+        <div className="container-page grid gap-x-10 gap-y-8 lg:grid-cols-[1fr_1.5fr]">
           <h2 className="text-2xl font-extrabold md:text-3xl">Frequently asked questions</h2>
           <Accordion type="single" collapsible className="w-full">
             {s.faqs.map((f, i) => (
@@ -140,7 +142,7 @@ function ServiceDetail() {
         </div>
       </section>
 
-      <section className="pb-4">
+      <section className="pb-0">
         <div className="container-page">
           <h2 className="text-2xl font-extrabold">Related services</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">

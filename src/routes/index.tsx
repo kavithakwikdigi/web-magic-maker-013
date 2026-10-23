@@ -65,7 +65,7 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-background">
-        <div className="container-page grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr]">
+        <div className="container-page grid items-center gap-x-12 gap-y-8 py-12 md:py-16 lg:grid-cols-[1.05fr_1fr]">
           <div className="fade-up">
             <p className="eyebrow">Digital Marketing Agency | Hyderabad, India</p>
             <h1 className="mt-5 text-4xl font-bold leading-[1.1] md:text-6xl">
@@ -102,10 +102,10 @@ function Home() {
       </section>
 
       {/* How it works together */}
-      <section className="py-20">
+      <section className="py-12 md:py-16">
         <div className="container-page">
           <SectionHead center eyebrow="Connected marketing" title="Four channels, one clear direction" text="SEO, paid advertising, social media, and your website work best when they support each other." />
-          <div className="relative mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative mt-8 grid md:mt-10 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="absolute left-[12%] right-[12%] top-10 hidden h-px bg-gradient-to-r from-brand/0 via-brand/40 to-brand/0 lg:block" aria-hidden="true" />
             {pillars.map(({ Icon, title, text }) => (
               <div key={title} className="relative rounded-xl border border-border bg-card p-6 text-center">
@@ -121,8 +121,8 @@ function Home() {
       </section>
 
       {/* Intro */}
-      <section className="bg-sky py-20">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-2">
+      <section className="bg-sky py-12 md:py-16">
+        <div className="container-page grid items-center gap-x-12 gap-y-8 lg:grid-cols-2">
           <img src={images.planning} alt="Marketing strategist planning a campaign on a glass wall with a colleague" loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
           <div>
             <p className="eyebrow">Our approach</p>
@@ -136,21 +136,21 @@ function Home() {
       </section>
 
       {/* Services */}
-      <section className="py-20">
+      <section className="py-12 md:py-16">
         <div className="container-page">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHead eyebrow="What we do" title="Services built around your growth" />
             <Link to="/services" className="text-sm font-bold text-brand hover:underline">View all services →</Link>
           </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {services.map((s, i) => <ServiceCard key={s.slug} s={s} index={i} />)}
           </div>
         </div>
       </section>
 
       {/* Why */}
-      <section className="bg-sky py-20">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-[1fr_1.3fr]">
+      <section className="bg-sky py-12 md:py-16">
+        <div className="container-page grid items-center gap-x-12 gap-y-8 lg:grid-cols-[1fr_1.3fr]">
           <div>
             <SectionHead eyebrow="Why Kwikdigi" title="Thoughtful Strategy. Creative Execution." />
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">A small, focused team means you talk to the people doing the work — and every decision has a reason behind it.</p>
@@ -168,10 +168,10 @@ function Home() {
       </section>
 
       {/* Process */}
-      <section className="py-20">
+      <section className="py-12 md:py-16">
         <div className="container-page">
           <SectionHead center eyebrow="How we work" title="Our Working Process" />
-          <ol className="relative mt-14 grid gap-10 lg:grid-cols-4 lg:gap-6">
+          <ol className="relative mt-8 grid gap-8 md:mt-10 lg:grid-cols-4 lg:gap-6">
             <div className="absolute left-6 top-0 h-full w-px bg-border lg:left-0 lg:top-6 lg:h-px lg:w-full" aria-hidden="true" />
             {steps.map((s) => (
               <li key={s.n} className="relative flex gap-5 lg:block">
@@ -187,10 +187,10 @@ function Home() {
       </section>
 
       {/* Markets */}
-      <section className="py-20">
+      <section className="py-12 md:py-16">
         <div className="container-page">
           <SectionHead eyebrow="Industries & markets" title="Digital Solutions for Businesses Across Markets" text="We work from Hyderabad and take on projects remotely for businesses in these markets." />
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <div className="rounded-xl bg-card p-7 shadow-soft">
               <h3 className="flex items-center gap-2 font-bold"><BarChart3 className="h-5 w-5 text-brand" /> Industries we can support</h3>
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -204,7 +204,7 @@ function Home() {
               </ul>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <PrimaryLink to="/contact">Start a Conversation</PrimaryLink>
             <WhatsAppButton label="Ask on WhatsApp" />
           </div>
