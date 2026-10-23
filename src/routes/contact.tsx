@@ -13,6 +13,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contact Kwikdigi in Ameerpet, Hyderabad. Call or WhatsApp +91 9849446927 or email kavitham6574@gmail.com." },
       { property: "og:title", content: "Contact Kwikdigi" },
       { property: "og:description", content: "Tell us about your business and digital goals. Call, WhatsApp, or email Kwikdigi." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -65,8 +67,8 @@ function Contact() {
         title="Let's Talk About Your Next Digital Project"
         text="Tell us about your business, your goals, and the digital challenges you want to solve. We'll use your enquiry to understand how we may be able to help."
       />
-      <section className="py-16">
-        <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.5fr]">
+      <section className="py-12 md:py-16">
+        <div className="container-page grid gap-x-10 gap-y-8 lg:grid-cols-[1fr_1.5fr]">
           <aside className="space-y-6">
             <div className="rounded-2xl bg-primary p-8 text-primary-foreground">
               <p className="text-xl font-extrabold">Kwikdigi</p>

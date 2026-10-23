@@ -9,13 +9,15 @@ export const Route = createFileRoute("/terms-of-service")({
       { name: "description", content: "Basic terms for using the Kwikdigi website and engaging our digital marketing services." },
       { property: "og:title", content: "Terms of Service — Kwikdigi" },
       { property: "og:description", content: "Basic terms for using the Kwikdigi website." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/terms-of-service" }],
   }),
   component: () => (
     <>
       <PageHero eyebrow="Legal" title="Terms of Service" />
-      <section className="container-page prose-article max-w-3xl py-16">
+      <section className="container-page prose-article max-w-3xl py-12 md:py-16 [&>h2:first-child]:mt-0">
         <h2>Use of this website</h2>
         <p>The content on this website is provided for general information about Kwikdigi and its services. It may be updated at any time without notice.</p>
         <h2>Services</h2>

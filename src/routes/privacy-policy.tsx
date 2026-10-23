@@ -9,13 +9,15 @@ export const Route = createFileRoute("/privacy-policy")({
       { name: "description", content: "How Kwikdigi collects, uses and protects information shared through this website." },
       { property: "og:title", content: "Privacy Policy — Kwikdigi" },
       { property: "og:description", content: "How Kwikdigi handles information shared through this website." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/privacy-policy" }],
   }),
   component: () => (
     <>
       <PageHero eyebrow="Legal" title="Privacy Policy" />
-      <section className="container-page prose-article max-w-3xl py-16">
+      <section className="container-page prose-article max-w-3xl py-12 md:py-16 [&>h2:first-child]:mt-0">
         <h2>Information you share</h2>
         <p>When you contact Kwikdigi by phone, WhatsApp, email, or through our enquiry form, you may share details such as your name, business name, email address, phone number, country, and project information.</p>
         <h2>How we use it</h2>
