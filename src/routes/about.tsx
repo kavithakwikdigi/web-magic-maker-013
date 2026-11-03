@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Lightbulb, Eye, BookOpen, Target, HeartHandshake, MessagesSquare, Route, PenTool, TrendingUp, Store, Rocket, GraduationCap, Stethoscope, Briefcase } from "lucide-react";
+import { Lightbulb, Eye, BookOpen, Target, HeartHandshake, MessagesSquare, Route as RouteIcon, PenTool, TrendingUp, Store, Rocket, GraduationCap, Stethoscope, Briefcase } from "lucide-react";
 import { images } from "@/lib/site";
 import { CtaBand, PageHero, SectionHead } from "@/components/site/ui";
 
@@ -28,7 +28,7 @@ const values = [
 
 const steps = [
   { Icon: MessagesSquare, t: "Listen first", d: "We learn about your business, your customers and what a good result looks like for you." },
-  { Icon: Route, t: "Plan the strategy", d: "We choose the channels that fit your goals and budget, and agree on a clear plan before any work begins." },
+  { Icon: RouteIcon, t: "Plan the strategy", d: "We choose the channels that fit your goals and budget, and agree on a clear plan before any work begins." },
   { Icon: PenTool, t: "Create and launch", d: "We design, write and build — pages, ads, content — and keep you involved at every step." },
   { Icon: TrendingUp, t: "Measure and improve", d: "We watch what the data says, explain it in plain language, and keep improving what works." },
 ];
