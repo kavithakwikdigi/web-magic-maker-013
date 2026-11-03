@@ -26,6 +26,21 @@ const values = [
   { Icon: HeartHandshake, t: "Customer-focused communication" },
 ];
 
+const steps = [
+  { Icon: MessagesSquare, t: "Listen first", d: "We learn about your business, your customers and what a good result looks like for you." },
+  { Icon: Route, t: "Plan the strategy", d: "We choose the channels that fit your goals and budget, and agree on a clear plan before any work begins." },
+  { Icon: PenTool, t: "Create and launch", d: "We design, write and build — pages, ads, content — and keep you involved at every step." },
+  { Icon: TrendingUp, t: "Measure and improve", d: "We watch what the data says, explain it in plain language, and keep improving what works." },
+];
+
+const audiences = [
+  { Icon: Store, t: "Small businesses", d: "Local shops and services that want to be easier to find and easier to choose." },
+  { Icon: Rocket, t: "Startups", d: "New brands that need a clear online presence without wasting budget." },
+  { Icon: GraduationCap, t: "Training institutes", d: "Coaching centres and institutes that want a steady flow of genuine enquiries." },
+  { Icon: Stethoscope, t: "Clinics", d: "Healthcare practices that need trust-building content and local visibility." },
+  { Icon: Briefcase, t: "Service brands", d: "Consultants and professional services that win work through credibility." },
+];
+
 function About() {
   return (
     <>
