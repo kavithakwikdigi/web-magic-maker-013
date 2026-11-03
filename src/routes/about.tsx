@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Lightbulb, Eye, BookOpen, Target, HeartHandshake } from "lucide-react";
+import { Lightbulb, Eye, BookOpen, Target, HeartHandshake, MessagesSquare, Route, PenTool, TrendingUp, Store, Rocket, GraduationCap, Stethoscope, Briefcase } from "lucide-react";
 import { images } from "@/lib/site";
-import { CtaBand, PageHero } from "@/components/site/ui";
+import { CtaBand, PageHero, SectionHead } from "@/components/site/ui";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
