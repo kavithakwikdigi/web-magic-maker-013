@@ -132,6 +132,22 @@ export const articles: Article[] = [
       { h: "Plan, execute, review", p: ["Set a simple monthly schedule of activities, decide how you'll measure progress, and review results regularly."], list: ["Discover: understand the business and audience.", "Plan: select channels and messages.", "Execute: deliver the campaigns and content.", "Improve: review results and refine."] },
     ],
   },
+  {
+    slug: "meta-ads-for-beginners",
+    title: "Meta Ads for Beginners: A Simple Getting-Started Guide",
+    category: "Meta Ads",
+    excerpt: "New to Facebook and Instagram ads? Learn the basics of campaigns, audiences, and budgets in plain language.",
+    minutes: 5,
+    image: images.workspace,
+    service: "meta-ads",
+    sections: [
+      { h: "What are Meta Ads?", p: ["Meta Ads are paid messages shown on Facebook and Instagram. They can appear in feeds, stories, and reels, and they let you reach people based on their location, age, interests, and behaviour — even before they search for you."] },
+      { h: "The three building blocks", p: ["Every Meta ad is organised in three levels:"], list: ["Campaign: your main goal, such as enquiries, messages, or website visits.", "Ad set: who you want to reach, where ads appear, and your budget.", "Ad: the actual image, video, and text people see."] },
+      { h: "Start with a clear goal", p: ["Choose one outcome before you spend anything — for example, more WhatsApp enquiries or more calls. A clear goal makes it easier to write the ad, choose the audience, and judge whether it worked."] },
+      { h: "Keep budgets modest at first", p: ["Begin with a small daily budget and let the ad run long enough to gather real results. Test one or two versions of your message, see which performs better, and improve from there rather than changing everything at once."] },
+      { h: "What to watch", p: ["Look beyond likes. The numbers that matter are enquiries, messages, calls, and cost per result. Review performance regularly and pause what clearly is not working."] },
+    ],
+  },
 ];
 
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);
