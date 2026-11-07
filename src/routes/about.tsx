@@ -55,7 +55,7 @@ function About() {
               We start by listening — who your customers are, what they ask before buying, and what a good result looks like for you. Then we pick the few channels that fit, do the work well, and explain what we see in plain language.
             </p>
           </div>
-          <img src={images.meeting} alt="Professionals discussing a marketing plan around a meeting table" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
+          <img src={images.meeting} alt="Professionals discussing a marketing plan around a meeting table" loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
         </div>
       </section>
 

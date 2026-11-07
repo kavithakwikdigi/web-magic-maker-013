@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Kwikdigi — Digital Marketing Agency in Hyderabad, India" },
-      { name: "description", content: "Kwikdigi helps businesses build a stronger online presence through SEO, performance advertising, social media and beautiful websites." },
+      { name: "description", content: "Kwikdigi is a digital marketing agency in Hyderabad offering SEO services, Google Ads and Meta Ads management, social media marketing and website designing for businesses in India and beyond." },
       { property: "og:title", content: "Kwikdigi — Digital Marketing Agency in Hyderabad" },
       { property: "og:description", content: "SEO, Google Ads, Meta Ads, social media marketing and websites for businesses in India and beyond." },
       { property: "og:type", content: "website" },
@@ -21,6 +21,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           name: "Kwikdigi",
+          url: "https://web-magic-maker-013.lovable.app",
           telephone: "+91 9849446927",
           email: "kavitham6574@gmail.com",
           address: { "@type": "PostalAddress", addressLocality: "Ameerpet, Hyderabad", addressRegion: "Telangana", addressCountry: "IN" },

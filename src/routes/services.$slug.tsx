@@ -17,10 +17,10 @@ export const Route = createFileRoute("/services/$slug")({
     const s = loaderData.service;
     return {
       meta: [
-        { title: `${s.name} — Kwikdigi Hyderabad` },
-        { name: "description", content: s.description },
-        { property: "og:title", content: `${s.name} — Kwikdigi` },
-        { property: "og:description", content: s.description },
+        { title: s.seoTitle },
+        { name: "description", content: s.seoDescription },
+        { property: "og:title", content: s.seoTitle },
+        { property: "og:description", content: s.seoDescription },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
@@ -43,9 +43,9 @@ export const Route = createFileRoute("/services/$slug")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-              { "@type": "ListItem", position: 2, name: "Services", item: "/services" },
-              { "@type": "ListItem", position: 3, name: s.name, item: `/services/${params.slug}` },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://web-magic-maker-013.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://web-magic-maker-013.lovable.app/services" },
+              { "@type": "ListItem", position: 3, name: s.name, item: `https://web-magic-maker-013.lovable.app/services/${params.slug}` },
             ],
           }),
         },
