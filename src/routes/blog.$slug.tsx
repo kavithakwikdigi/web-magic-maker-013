@@ -24,11 +24,11 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: `/blog/${params.slug}` }],
-      scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.excerpt, author: { "@type": "Organization", name: "Kwikdigi" }, publisher: { "@type": "Organization", name: "Kwikdigi" } }) },
+      scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BlogPosting", headline: a.title, description: a.excerpt, mainEntityOfPage: `https://web-magic-maker-013.lovable.app/blog/${params.slug}`, author: { "@type": "Organization", name: "Kwikdigi", url: "https://web-magic-maker-013.lovable.app" }, publisher: { "@type": "Organization", name: "Kwikdigi", url: "https://web-magic-maker-013.lovable.app" } }) },
         { type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-          { "@type": "ListItem", position: 2, name: "Blog", item: "/blog" },
-          { "@type": "ListItem", position: 3, name: a.title, item: `/blog/${params.slug}` },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://web-magic-maker-013.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://web-magic-maker-013.lovable.app/blog" },
+          { "@type": "ListItem", position: 3, name: a.title, item: `https://web-magic-maker-013.lovable.app/blog/${params.slug}` },
         ] }) }],
     };
   },
