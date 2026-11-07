@@ -129,7 +129,7 @@ function Home() {
             <p className="eyebrow">Our approach</p>
             <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-4xl">Marketing That Starts With Your Customers</h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Before we touch a keyword or an ad, we learn who you serve and what makes people pick you. That shapes everything else — the search terms we target, the posts we write and the pages we build — so your message feels clear and consistent wherever people meet you.
+              As a digital marketing company in Hyderabad, we plan SEO, advertising, social media and website work around one thing: your customers. Before we touch a keyword or an ad, we learn who you serve and what makes people pick you. That shapes everything else — the search terms we target, the posts we write and the pages we build — so your message feels clear and consistent wherever people meet you.
             </p>
             <div className="mt-8"><PrimaryLink to="/about">More About Kwikdigi</PrimaryLink></div>
           </div>
