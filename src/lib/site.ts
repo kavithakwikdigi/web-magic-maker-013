@@ -25,6 +25,8 @@ export type Service = {
   short: string;
   heading: string;
   description: string;
+  seoTitle: string;
+  seoDescription: string;
   includes: string[];
   benefits: string[];
   cta: string;
@@ -37,6 +39,8 @@ export const services: Service[] = [
   {
     slug: "seo",
     name: "Search Engine Optimization (SEO)",
+    seoTitle: "SEO Services in Hyderabad — Kwikdigi",
+    seoDescription: "Professional SEO services in Hyderabad: keyword research, on-page and technical SEO, local SEO and clear reporting from Kwikdigi, Ameerpet.",
     short: "Get found by people searching for what you offer.",
     heading: "Help Your Business Get Found on Google",
     description:
@@ -55,6 +59,8 @@ export const services: Service[] = [
   {
     slug: "google-ads",
     name: "Google Ads Management",
+    seoTitle: "Google Ads Agency in Hyderabad — Kwikdigi",
+    seoDescription: "Google Ads management services in Hyderabad — campaign planning, keyword targeting, ad copywriting and transparent performance reporting.",
     short: "Appear when customers are actively searching.",
     heading: "Reach the Right Audience at the Right Time",
     description:
@@ -73,6 +79,8 @@ export const services: Service[] = [
   {
     slug: "meta-ads",
     name: "Meta Ads Management",
+    seoTitle: "Meta Ads Agency in Hyderabad — Kwikdigi",
+    seoDescription: "Facebook and Instagram advertising services in Hyderabad — audience research, creative testing and campaign optimization by Kwikdigi.",
     short: "Facebook and Instagram campaigns with thoughtful creative.",
     heading: "Turn Attention into Meaningful Action",
     description:
@@ -91,6 +99,8 @@ export const services: Service[] = [
   {
     slug: "social-media-marketing",
     name: "Social Media Marketing",
+    seoTitle: "Social Media Marketing Agency in Hyderabad — Kwikdigi",
+    seoDescription: "Social media marketing in Hyderabad — content calendars, Instagram and Facebook marketing, reels planning and a consistent brand presence.",
     short: "A consistent, recognizable brand on social platforms.",
     heading: "Build a Consistent and Recognizable Brand",
     description:
@@ -109,6 +119,8 @@ export const services: Service[] = [
   {
     slug: "website-designing",
     name: "Website Designing",
+    seoTitle: "Website Designing Company in Hyderabad — Kwikdigi",
+    seoDescription: "Professional website designers in Hyderabad creating clean, modern, mobile-friendly business websites that build trust and win enquiries.",
     short: "Clean, modern, mobile-friendly websites.",
     heading: "Beautiful Websites Built Around Your Business",
     description:
@@ -127,6 +139,8 @@ export const services: Service[] = [
   {
     slug: "website-development",
     name: "Website Development",
+    seoTitle: "Website Development Services in Hyderabad — Kwikdigi",
+    seoDescription: "Business website development in Hyderabad — responsive, fast, maintainable websites with working forms and clear navigation.",
     short: "Responsive, maintainable, functional web experiences.",
     heading: "Bring Your Digital Experience to Life",
     description:
@@ -145,6 +159,8 @@ export const services: Service[] = [
   {
     slug: "content-marketing",
     name: "Content Marketing",
+    seoTitle: "Content Marketing Services in Hyderabad — Kwikdigi",
+    seoDescription: "Content marketing services in Hyderabad — content strategy, website copy, blog articles and social captions that answer real customer questions.",
     short: "Content that explains, educates, and connects.",
     heading: "Content That Connects With Your Audience",
     description:
@@ -163,6 +179,8 @@ export const services: Service[] = [
   {
     slug: "local-seo",
     name: "Local SEO",
+    seoTitle: "Local SEO Services in Hyderabad — Kwikdigi",
+    seoDescription: "Local SEO services in Hyderabad and Ameerpet — Google Business Profile optimization, local citations and location-based content.",
     short: "Be visible to customers searching nearby.",
     heading: "Connect With Customers Searching Locally",
     description:
@@ -181,6 +199,8 @@ export const services: Service[] = [
   {
     slug: "landing-page-design",
     name: "Landing Page Design",
+    seoTitle: "Landing Page Design in Hyderabad — Kwikdigi",
+    seoDescription: "Landing page design in Hyderabad — focused, conversion-ready pages built to pair with your Google Ads and Meta Ads campaigns.",
     short: "Focused pages built around one campaign goal.",
     heading: "Turn More Visits into Valuable Enquiries",
     description:
@@ -199,6 +219,8 @@ export const services: Service[] = [
   {
     slug: "digital-marketing-strategy",
     name: "Digital Marketing Strategy",
+    seoTitle: "Digital Marketing Strategy Services in Hyderabad — Kwikdigi",
+    seoDescription: "Digital marketing strategy services in Hyderabad — a practical roadmap for channels, budget, messaging and measurement.",
     short: "A practical roadmap for your digital growth.",
     heading: "A Clear Plan for Your Digital Growth",
     description:
